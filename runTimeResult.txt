@@ -1,0 +1,12 @@
+arrSize extraLargeArray(100000) largeArray(10000)  mediumArray(1000) smallArray(100)  tinyArray(10)
+Insert  996.0298 ms             8.7023 ms          179.7 μs          49.8 μs          38.1 μs
+Append  3.0842 ms               504.3 μs           130.3 μs          134.7 μs         91.2 μs
+
+convert to ms
+arrSize extraLargeArray(100000) largeArray(10000)  mediumArray(1000) smallArray(100)  tinyArray(10)
+Insert  996.0298 ms             8.7023 ms          0.1797 ms         0.0498 ms        0.0381 ms
+Append  3.0842 ms               0.5043 ms          0.1303 ms         0.1347 ms        0.0912 ms
+Diff    992.9456 ms             8.198 ms           0.0494 ms         0.0849 ms        0.0531 ms 
+
+From the result its clear the push or append is faster then unshift. Push is faster because it doesnt have to sort through all the elements of array to get to the first one.
+The push just to get to the end of the array and just one. They both can scale, although append scales a lot faster.
